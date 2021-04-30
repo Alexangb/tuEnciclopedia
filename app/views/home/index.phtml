@@ -1,31 +1,34 @@
 <?php
-require_once('../header.phtml');
+require_once('masterpage/masterpage.php');
+
+function contenedor()
+{
 ?>
-<section class="about-services">
-	<div class="contenedor">
-		<h2 class="titulo">Nuestros Servicios</h2>
-		<div class="servicio-cont">
-			<div class="servicio-ind">
-				<img src="img/ilustracion1.svg" alt="">
-				<h3>Area desarrollo de sistemas</h3>
-				<p>En esta sección mostrará información (imágenes, texto, entre
-					otros) acerca de los principios de desarrollo de software SOLID (con ejemplos de código).</p>
-			</div>
-			<div class="servicio-ind">
-				<img src="img/ilustracion4.svg" alt="">
-				<h3>Area Apuestas</h3>
-				<p>Esta sección tiene como propósito informar cómo podemos usar las matemáticas
-					para tener más posibilidades de ganar en una apuesta deportiva, permitirá a los usuarios realizar
-					los siguientes cálculos: Esperanza Matemática, Probabilidad de la casa de apuesta (PCA), Ganancia Neta, Retorno de inversión, </p>
-			</div>
-			<div class="servicio-ind">
-				<img src="img/ilustracion3.svg" alt="">
-				<h3>Name</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, qui?</p>
+	<section class="about-services">
+		<div class="contenedor">
+			<h2 class="titulo">Nuestros Servicios</h2>
+			<div class="servicio-cont">
+				<div class="servicio-ind">
+					<img src="img/ilustracion1.svg" alt="">
+					<h3>Area desarrollo de sistemas</h3>
+					<p>En esta sección mostrará información (imágenes, texto, entre
+						otros) acerca de los principios de desarrollo de software SOLID (con ejemplos de código).</p>
+				</div>
+				<div class="servicio-ind">
+					<img src="img/ilustracion4.svg" alt="">
+					<h3>Area Apuestas</h3>
+					<p>Esta sección tiene como propósito informar cómo podemos usar las matemáticas
+						para tener más posibilidades de ganar en una apuesta deportiva </p>
+				</div>
+				<div class="servicio-ind">
+					<img src="img/ilustracion3.svg" alt="">
+					<h3>Noticias</h3>
+					<p>Es esta sección se encontraran noticias sobre las casas de apuestas mas grandes del peru</p>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+
 <?php
-require_once('footer.phtml');
+};
 ?>

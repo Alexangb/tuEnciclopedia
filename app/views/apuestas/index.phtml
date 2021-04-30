@@ -1,12 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	<h1>index de apuestas</h1>
-</body>
-</html>
+<?php
+require_once('masterpage/masterpage.php');
+
+function contenedor()
+{
+?>
+	<section class="portafolio">
+		<div class="contenedor">
+			<h2 class="titulo">Area de Apuestas</h2>
+			<div class="galeria-port">
+				<div class="imagen-port">
+					<img src="img/img1.jpg" alt="">
+					<div class="hover-galeria">
+						<img src="img/icono1.png" alt="">
+						<p><a href="apuestas/casaApuesta"> Casa de apuestas</a></p>
+					</div>
+				</div>
+				<div class="imagen-port">
+					<img src="img/img2.jpg" alt="">
+					<div class="hover-galeria">
+						<img src="img/icono1.png" alt="">
+						<p><a href="apuestas/esperanzaMatematica">Esperanza Matematica</a></p>
+					</div>
+				</div>
+				<div class="imagen-port">
+					<img src="img/img3.jpg" alt="">
+					<div class="hover-galeria">
+						<img src="img/icono1.png" alt="">
+						<p><a href="apuestas/gananciaNeta"> Ganancia Neta</a></p>
+					</div>
+				</div>
+				<div class="imagen-port">
+					<img src="img/img1.jpg" alt="">
+					<div class="hover-galeria">
+						<img src="img/icono1.png" alt="">
+						<p><a href="apuestas/retornoDeInvercion">Retorno de Inversion</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<?php
+};
+?>
+
+

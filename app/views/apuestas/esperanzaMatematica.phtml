@@ -5,7 +5,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 	<title>Document</title>
 </head>
 
@@ -17,21 +19,21 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-sm-8">
 				<form action="<?= URL ?>apuestas/esperanzaMatematica" method="post">
 					<div class="form-group">
 						<label for="val1">Cuota</label>
-						<input type="int" name="val1" id="val1" class="form-control" value="<?= $data['val1'] ?>">
+						<input type="int" name="val1" id="val1" min="0" required class="form-control" value="<?= $data['val1'] ?>">
 
 					</div>
 					<div class="form-group">
 						<label for="val2">Probabilidad</label>
-						<input type="int" name="val2" id="val2" class="form-control" value="<?= $data['v2'] ?>">
+						<input type="int" name="val2" id="val2" min="0" required class="form-control" value="<?= $data['val2'] ?>">
 
 					</div>
 					<br>
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary">Enviar</button>
+						<button type="submit" class="btn btn-primary form-control">Enviar</button>
 					</div>
 				</form>
 
@@ -42,8 +44,12 @@
 			<div class="col-sm-8">
 
 				Respuesta: <input type="int" class="form-control" value="<?= $data['rpta'] ?>" disabled>
-				<label for=""> <?=$data['mbox']?></label>
+				<label for=""> <?= $data['mbox'] ?></label>
+				<div class="form-group">
+					<a href="../apuestas" class="btn btn-success col-sm-4"> Volver</a>
+				</div>
 			</div>
+
 		</div>
 	</div>
 </body>

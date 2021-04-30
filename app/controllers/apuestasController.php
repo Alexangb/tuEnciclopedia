@@ -10,13 +10,13 @@ class ApuestasController extends Controller implements Operaciones{
 		if ($param == null) {
 			$val1 = (float)isset($_POST['val1']) ? $_POST['val1'] : '';
 			$val2 = (float)isset($_POST['val2']) ? $_POST['val2'] : '';
-			$v2 = (float) $val2 / 100;
-			$rpta = (float)$val1 * (float)$v2;
+			// $v2 = (float) $val2 / 100;
+			$rpta = (float)$val1 * (float)$val2;
 		} else {
 			$val1 = isset($param[0]) ? $param[0] : '';
 			$val2 = isset($param[1]) ? $param[1] : '';
-			$v2 = (float) $val2 / 100;
-			$rpta = (float) $val1 * (float) $v2;
+			// $v2 = (float) $val2 / 100;
+			$rpta = (float)$val1 * (float)$val2;
 		}
 		if ($rpta < 1) {
 			$mbox = "el juego es desfavorables para el apostador ";
@@ -25,7 +25,7 @@ class ApuestasController extends Controller implements Operaciones{
 		}
 		$data = [
 			'val1' => $val1,
-			'val2' => $v2,
+			'val2' => $val2,
 			'v2' => $val2,
 			'rpta' => $rpta,
 			'mbox' => $mbox
@@ -41,15 +41,25 @@ class ApuestasController extends Controller implements Operaciones{
 			$val1 = (float)isset($_POST['val1']) ? $_POST['val1'] : '';
 			// $val2 = (float)isset($_POST['val2']) ? $_POST['val2'] : '';
 			// $v2 = (float) $val2 / 100;
-			$rpta = 1 / (float)$val1 * 100;
+			if ($val1==0) {
+				$rpta=0;
+			}else{
+				$rpta = 1 / (float)$val1 * 100;
 
-			$r = round($rpta, 0);
+				$r = round($rpta, 0);
+			}
+			
 		} else {
 			$val1 = isset($param[0]) ? $param[0] : '';
 			// $val2 = isset($param[1]) ? $param[1] : '';
 			// $v2 = (float) $val2 / 100;
-			$rpta = 1 / (float)$val1 * 100;
-			$r = round($rpta, 0);
+			if ($val1 == 0) {
+				$rpta = 0;
+			} else {
+				$rpta = 1 / (float)$val1 * 100;
+
+				$r = round($rpta, 0);
+			}
 		}
 		$mbox = "hay un {$r}% de probavilidad de la casa de apuesta ";
 		$data = [

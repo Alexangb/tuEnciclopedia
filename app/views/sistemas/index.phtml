@@ -1,108 +1,88 @@
 <?php
-require_once '../header.phtml';
+require_once('masterpage/masterpage.php');
+
+function contenedor()
+{
+?>
+	<main>
+		<section class="contenedor sobre-nosotros">
+			<h2 class="titulo">Principios SOLID</h2>
+			<div class="contenedor-sobre-nosotros">
+				<img src="img/animacioncoding.svg" alt="" class="imagen-about-us">
+				<div class="contenido-textos">
+					<h3><span>1</span>Single Responsability Principle (SRP)</h3>
+					<p>El principio de responsabilidad única se basa en que cada clase o método sólo debe hacer una cosa, sencilla y concreta</p>
+					<h3><span>2</span>Open / Closed Principle</h3>
+					<p>El principio Open/Closed dice que una clase/método debe estar abierto a extensiones pero cerrado a modificaciones.</p>
+					<h3><span>3</span>Liskov Substitution Principle</h3>
+					<p>Este principio trata sobre que los objetos de un desarrollo deberían ser reemplazables por instancias de sus subtipos sin alterar el correcto funcionamiento del desarrollo. Dicho de otro modo: cualquier subclase debería poder ser sustituible por la clase padre.</p>
+					<h3><span>4</span>Interface Segregation Principle</h3>
+					<p>Este principio trata sobre algo parecido a SRP. Es mejor definir una serie de métodos abstractos a través de una serie de interfaces para que implementen nuestras clases.
+						Cada interface tendrá una única responsabilidad. Es preferible tener muchas interfaces que contengan pocos métodos que tener un interface con muchos métodos.</p>
+					<h3><span>5</span>Dependency Inversion Principle</h3>
+					<p>El objetivo de este principio es conseguir desacoplar las clases de nuestro desarrollo. Que una clase pueda funcionar por sí sola sin depender de otra.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="clientes contenedor">
+			<h2 class="titulo">Ejemplos</h2>
+			<div class="cards">
+
+				<div class="card">
+
+					<img src="img/face1.jpg" alt="">
+
+					<div class="contenido-texto-card">
+						<h4>Single Responsability Principle (SRP)</h4>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="cards">
+				<div class="card">
+					<img src="img/openClosed.jpg" alt="">
+					<div class="contenido-texto-card">
+						<h4>Open / Closed Principle</h4>
+
+					</div>
+				</div>
+			</div>
+			<div class="cards">
+				<div class="card">
+					<img src="img/liskov.jpg" alt="">
+					<div class="contenido-texto-card">
+						<h4>Liskov Substitution Principle</h4>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="cards">
+				<div class="card">
+					<img src="img/interfacesegracion.jpg" alt="">
+					<div class="contenido-texto-card">
+						<h4>Interface Segregation Principle</h4>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="cards">
+				<div class="card">
+					<img src="img/face2.jpg" alt="">
+					<div class="contenido-texto-card">
+						<h4>Dependency Inversion Principle</h4>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+<?php
+};
 ?>
 
-<main>
-	<section class="contenedor sobre-nosotros">
-		<h2 class="titulo">Nuestro producto</h2>
-		<div class="contenedor-sobre-nosotros">
-			<img src="img/ilustracion2.svg" alt="" class="imagen-about-us">
-			<div class="contenido-textos">
-				<h3><span>1</span>Los mejores productos</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
-					consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
-					velit doloribus laboriosam ut.</p>
-				<h3><span>2</span>Los mejores productos</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
-					consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
-					velit doloribus laboriosam ut.</p>
-			</div>
-		</div>
-	</section>
-	<section class="portafolio">
-		<div class="contenedor">
-			<h2 class="titulo">Portafolio</h2>
-			<div class="galeria-port">
-				<div class="imagen-port">
-					<img src="img/img1.jpg" alt="">
-					<div class="hover-galeria">
-						<img src="img/icono1.png" alt="">
-						<p>Nuestro trabajo</p>
-					</div>
-				</div>
-				<div class="imagen-port">
-					<img src="img/img2.jpg" alt="">
-					<div class="hover-galeria">
-						<img src="img/icono1.png" alt="">
-						<p>Nuestro trabajo</p>
-					</div>
-				</div>
-				<div class="imagen-port">
-					<img src="img/img3.jpg" alt="">
-					<div class="hover-galeria">
-						<img src="img/icono1.png" alt="">
-						<p>Nuestro trabajo</p>
-					</div>
-				</div>
-				<div class="imagen-port">
-					<img src="img/img1.jpg" alt="">
-					<div class="hover-galeria">
-						<img src="img/icono1.png" alt="">
-						<p>Nuestro trabajo</p>
-					</div>
-				</div>
-				<div class="imagen-port">
-					<img src="img/img4.jpg" alt="">
-					<div class="hover-galeria">
-						<img src="img/icono1.png" alt="">
-						<p>Nuestro trabajo</p>
-					</div>
-				</div>
-				<div class="imagen-port">
-					<img src="img/img5.jpg" alt="">
-					<div class="hover-galeria">
-						<img src="img/icono1.png" alt="">
-						<p>Nuestro trabajo</p>
-					</div>
-				</div>
-				<div class="imagen-port">
-					<img src="img/img6.jpg" alt="">
-					<div class="hover-galeria">
-						<img src="img/icono1.png" alt="">
-						<p>Nuestro trabajo</p>
-					</div>
-				</div>
-				<div class="imagen-port">
-					<img src="img/img7.jpg" alt="">
-					<div class="hover-galeria">
-						<img src="img/icono1.png" alt="">
-						<p>Nuestro trabajo</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="clientes contenedor">
-		<h2 class="titulo">Que dicen nuestros clientes</h2>
-		<div class="cards">
-			<div class="card">
-				<img src="img/face1.jpg" alt="">
-				<div class="contenido-texto-card">
-					<h4>Name</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sapiente!</p>
-				</div>
-			</div>
-			<div class="card">
-				<img src="img/face2.jpg" alt="">
-				<div class="contenido-texto-card">
-					<h4>Name</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sapiente!</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-</main>
-<?php
-require_once '../footer.phtml';
-?>
