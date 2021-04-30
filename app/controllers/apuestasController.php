@@ -38,7 +38,7 @@ class ApuestasController extends Controller implements Operaciones{
 	public function casaApuesta($param = null)
 	{
 		if ($param == null) {
-			$val1 = (float)isset($_POST['val1']) ? $_POST['val1'] : '';
+			$val1 = (float)isset($_POST['val1']) ? $_POST['val1'] : '1';
 			// $val2 = (float)isset($_POST['val2']) ? $_POST['val2'] : '';
 			// $v2 = (float) $val2 / 100;
 			if ($val1==0) {
@@ -50,7 +50,7 @@ class ApuestasController extends Controller implements Operaciones{
 			}
 			
 		} else {
-			$val1 = isset($param[0]) ? $param[0] : '';
+			$val1 = isset($param[0]) ? $param[0] : '1';
 			// $val2 = isset($param[1]) ? $param[1] : '';
 			// $v2 = (float) $val2 / 100;
 			if ($val1 == 0) {
@@ -61,7 +61,7 @@ class ApuestasController extends Controller implements Operaciones{
 				$r = round($rpta, 0);
 			}
 		}
-		$mbox = "hay un {$r}% de probavilidad de la casa de apuesta ";
+		$mbox = "hay un {$r}% de probabilidad de la casa de apuesta ";
 		$data = [
 			'val1' => $val1,
 
@@ -82,13 +82,13 @@ class ApuestasController extends Controller implements Operaciones{
 		} else {
 			$val1 = isset($param[0]) ? $param[0] : '';
 			$val2 = isset($param[1]) ? $param[1] : '';
-			$rpta = (float)$val1 * (float)($val2 - 1);
+			$rpta = (float)$val1 * ((float)$val2 - 1);
 		}
 		$mbox = "la ganancia neta es de {$rpta} soles";
 		$data = [
 			'val1' => $val1,
 			'val2' => $val2,
-			'rpta' => $rpta,
+			'rpt' => $rpta,
 			'mbox' => $mbox
 		];
 		$this->renderView('apuestas/gananciaNeta', $data);
@@ -96,15 +96,15 @@ class ApuestasController extends Controller implements Operaciones{
 	public function retornoDeInvercion($param = null)
 	{
 		if ($param == null) {
-			$gnta = (float)isset($_POST['val1']) ? $_POST['val1'] : '';
-			$intotal = (float)isset($_POST['val2']) ? $_POST['val2'] : '';
+			$gnta = (float)isset($_POST['val1']) ? $_POST['val1'] : '1';
+			$intotal = (float)isset($_POST['val2']) ? $_POST['val2'] : '1';
 
-			$rpta = (float) $gnta  / (float) $intotal * 100;
+			$rpta = ((float) $gnta  / (float) $intotal)* 100;
 		} else {
-			$gnta = isset($param[0]) ? $param[0] : '';
-			$intotal = isset($param[1]) ? $param[1] : '';
+			$gnta = isset($param[0]) ? $param[0] : '1';
+			$intotal = isset($param[1]) ? $param[1] : '1';
 
-			$rpta = (float) $intotal / (float) $intotal * 100;
+			$rpta =( (float) $intotal / (float) $intotal )* 100;
 		}
 		$res = round($rpta, 0);
 		$mbox = "el retorno de inversion es de  {$res} centimos";
